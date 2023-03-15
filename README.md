@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# TasteBuds: Project Specification
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objective
+Provide a platform to help users decide on restaurants based on their cravings & share their food journey with friends!
 
-## Available Scripts
+## User Motivations
+Friends are hungry but can’t decide on what to eat. They will use this app to help them decide based on location, price range, cuisine, meal time, etc
 
-In the project directory, you can run:
+## Technologies
+Frontend: React.js
+Backend: Flask
+Database: MongoDB
 
-### `npm start`
+## User Interface
+Figma File Link
+https://www.figma.com/file/OeC9MybkoIXMEPiW5FWtzT/TasteBuds-UI?t=JwCamBixfTPdBtBj-1
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## App Runthrough
+A new user creates an account and logs into the app. They are now given the ability to create groups or upload new food to the database. When creating groups, they are provided with an URL that can be shared to their friends. Their friends can click on the link to join the group. The group creator has the ability to kick members and set preferences of food (Location, Price Range, Cuisine, Breakfast/Lunch/Dinner, Allergens). Once all friends are in the group and preferences have been set, the group owner clicks on "Start Matching!" button. This will redirect all members to the Swipe Page. Here, the members are prompted with a food cards (based on the preferences that were set previously) where they can choose to swipe left to drop the food or swipe right to like the food. Same ~20 cards will be displayed to each memeber. If a member finishes swiping early, they are redirected to the Waiting for Others Page. Once all members finish, they are all directed to the Final Decision Page where they are matched with a food card based on the card that was liked the most. Upon a tie, both cards will be shown. Now everyones happy :D.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Pages
+### Swipe Page
+Where you can swipe left to drop food, right to keep food
+### Waiting for Others Page
+If one user finishes early, they are redirected to this page until everyone else in the group finishes
+### Final Decision Page
+Displays food for everyone in that group
+### Home Page
+Landing Page
+### Create Group Page
+Where you can make groups to and invite friends
+### Manage Group Page
+Where you can manage the group members, food preferences
+### Upload Page
+Where any logged in users can upload food 
+### Log-In / Sign-Up Page
+Where users can log in or sign up
