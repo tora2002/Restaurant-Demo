@@ -6,15 +6,13 @@ import Register from './pages/register/register';
 import Group from './pages/group/group';
 import Swipe from './pages/swipe/swipe';
 import Upload from './pages/upload/upload';
-import Header from './components/header/header';
 
 function App() {
   return (
     <>
       <Router>
         <Routes>
-        <Route exact path={'/'} element={ <Header/> } />
-        <Route exact path={'/home'} element={ <Home/> } />
+        <Route exact path={'/'} element={ <Home/> } />
         <Route exact path={'/login'} element={ <Login/> } />
         <Route exact path={'/register'} element={ <Register/> } />
         <Route exact path={'/group'} element={ <Group/> } />
