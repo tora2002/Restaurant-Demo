@@ -1,0 +1,37 @@
+.headerContainer {
+    height: 60px;
+    background-color: white;
+    padding-left: 35px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 4px lightgray;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    background-color: var(--sun-glow);
+    border-radius: 20px;
+}
+
+.pageContainer {
+    display: flex;
+    flex-direction: 'row';
+}
+
+.headerText {
+    background-color: transparent;
+    padding-left: 20px;
+    padding-right: 20px;
+    font: 'DM Sans';
+    font-size: 14px;
+    font-weight: 550;
+    cursor: pointer;
+    border: 0px;
+}
+
+button:hover {
+    color: var(--vista-blue);
+}
