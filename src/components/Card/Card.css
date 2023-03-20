@@ -1,0 +1,9 @@
+.card {
+    width: 900px;
+    height: 450px;
+
+    background-color: var(--baby-powder);
+
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px lightgray;
+}
