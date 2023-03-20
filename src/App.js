@@ -6,6 +6,7 @@ import Register from './pages/register/register';
 import Group from './pages/group/group';
 import Swipe from './pages/swipe/swipe';
 import Upload from './pages/upload/upload';
+import Button from './components/button/button';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route exact path={'/upload'} element={ <Upload/> } />
         </Routes>
       </Router>
+      <Button text="text"/>
     </>
   );
 }
