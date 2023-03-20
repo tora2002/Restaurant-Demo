@@ -1,12 +1,18 @@
 .parentButton{
     background-image: linear-gradient(to right bottom, var(--sun-glow), var(--orange), var(--indian-red), var(--fuchsia-rose));
+    filter: grayscale(10%);
+    
+    
     height: 85px;
     width: 350px;
+ 
     border-radius: 20px;
+    border: none;
+    
+    
     text-align: center;
     color: var(--baby-powder);
     font-family: 'DM Sans';
     font-size: 30px;
-    border: none;
     font-weight: bold;
-}
+    }
