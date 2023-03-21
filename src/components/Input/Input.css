@@ -1,7 +1,7 @@
 .custom-input {
   width:stretch;
   height:stretch;
-  border: double 3px transparent;
+  border: double 2px transparent;
   border-radius: 10px;
   background-image: linear-gradient(white, white), linear-gradient(to bottom right, #ffcf42, #EC6F34, #E24C52, #C6427B);
   background-origin: border-box;

@@ -1,11 +1,11 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/home/home';
-import Login from './pages/login/login';
-import Register from './pages/register/register';
-import Group from './pages/group/group';
-import Swipe from './pages/swipe/swipe';
-import Upload from './pages/upload/upload';
+import Login from './pages/Login/Login';
+import Register from './pages/Register/Register';
+import Group from './pages/Group/Group';
+import Swipe from './pages/Swipe/Swipe';
+import Upload from './pages/Upload/Upload';
 
 function App() {
   return (

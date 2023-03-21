@@ -1,9 +1,9 @@
 import React from 'react';
 import './Card.css'
 
-function Card( {content} ) {
+function Card( {content, isFloating} ) {
     return (
-        <div className="card">
+        <div className={isFloating ? 'floating-card' : 'outline-card'}>
             {content}
         </div>
     );

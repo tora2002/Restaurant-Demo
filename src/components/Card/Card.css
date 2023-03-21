@@ -1,9 +1,21 @@
-.card {
+.floating-card {
     width: stretch;
     height: stretch;
 
-    background-color: var(--baby-powder);
+    background-color: white;
 
     border-radius: 20px;
     box-shadow: 0px 4px 4px lightgray;
+}
+
+.outline-card {
+    width:stretch;
+    height:stretch;
+
+    border: double 3px transparent;
+    border-radius: 10px;
+    
+    background-image: linear-gradient(white, white), linear-gradient(to bottom right, #ffcf42, #EC6F34, #E24C52, #C6427B);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
 }
