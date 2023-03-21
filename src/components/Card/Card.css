@@ -1,6 +1,6 @@
 .card {
-    width: 900px;
-    height: 450px;
+    width: stretch;
+    height: stretch;
 
     background-color: var(--baby-powder);
 

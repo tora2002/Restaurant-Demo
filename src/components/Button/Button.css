@@ -3,8 +3,8 @@
     filter: grayscale(10%);
     
     
-    height: 85px;
-    width: 350px;
+    height: stretch;
+    width: stretch;
  
     border-radius: 20px;
     border: none;

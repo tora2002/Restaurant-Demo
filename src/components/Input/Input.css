@@ -1,20 +1,20 @@
-  .custom-input {
-    width:fill;
-    height:fill;
-    border: double 3px transparent;
-    border-radius: 10px;
-    background-image: linear-gradient(white, white), linear-gradient(to bottom right, #ffcf42, #EC6F34, #E24C52, #C6427B);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-  }
+.custom-input {
+  width:stretch;
+  height:stretch;
+  border: double 3px transparent;
+  border-radius: 10px;
+  background-image: linear-gradient(white, white), linear-gradient(to bottom right, #ffcf42, #EC6F34, #E24C52, #C6427B);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
 
   
-  .custom-input:focus {
-    border-color: blue;
-  }
+.custom-input:focus {
+  border-color: blue;
+}
 
-  .custom-input::placeholder{
-    color: gray;
-    font-style: bold;
-    padding: 10px;
-  }
+.custom-input::placeholder{
+  color: gray;
+  font-style: bold;
+  padding: 10px;
+}
