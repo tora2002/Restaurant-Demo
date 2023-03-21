@@ -1,13 +1,13 @@
 import React from "react";
 import "./input.css";
 
-function Input(props) {
+function Input( {placeholder, id, value} ) {
   return (
     <input
       className="custom-input" // add a class name to your custom input
-      placeholder={props.placeholder}
-      id={props.id}
-      value={props.value}
+      placeholder={placeholder}
+      id={id}
+      value={value}
     />
   );
 }
