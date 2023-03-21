@@ -6,7 +6,7 @@ function Button( {text, onClickHandler} ) {
         <button class = "parentButton" onClick={onClickHandler}>
             {text}
         </button>
-        );
-    }
+    );
+}
 
 export default Button;
