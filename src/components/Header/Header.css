@@ -1,12 +1,12 @@
 .headerContainer {
+    width: 100vw;
     height: 60px;
     background-color: white;
-    padding-left: 35px;
-    padding-right: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 4px 4px lightgray;
+    position: fixed;
 }
 
 .logo {
@@ -14,20 +14,25 @@
     height: 40px;
     background-color: var(--sun-glow);
     border-radius: 20px;
+
+    position: relative;
+    margin-left: 35px;
 }
 
 .pageContainer {
     display: flex;
     flex-direction: 'row';
+
+    position: relative;
+    margin-right: 20px;
 }
 
 .headerText {
     background-color: transparent;
+    font-size: 14px;
+    font-weight: 500;
     padding-left: 20px;
     padding-right: 20px;
-    font: 'DM Sans';
-    font-size: 14px;
-    font-weight: 550;
     color: black;
     text-decoration: none;
     cursor: pointer;
