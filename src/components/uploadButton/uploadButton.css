@@ -1,0 +1,18 @@
+.uploadBtn{ 
+    font-size: xx-large;
+    align-items: center;
+    width: 350px;
+    height: 350px;
+    border: double 2px transparent;
+    border-radius: 10px;
+     background-image: linear-gradient(white, white), radial-gradient(circle at top left, var(--indian-red),var(--orange));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;     
+}
+.txtGradient{
+    color: var(--indian-red);
+}
+input{
+    display: none;
+}
+
