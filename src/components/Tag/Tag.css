@@ -1,84 +1,33 @@
-.defaultTag{
-    background-color: var(--sun-glow);
-
-    height: 50;
-    width: 140;
+.tag{
+    height: 50px;
+    width: 140px;
  
     border-radius: 20px;
     border: none;
-    
-    
+     
     text-align: center;
     color: var(--baby-powder);
     font-family: 'DM Sans';
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
+}
+
+.defaultTag{
+    background-color: var(--sun-glow);
 }
 
 .cuisineTag{
     background-color: var(--sun-glow);
-
-    height: 50;
-    width: 140;
- 
-    border-radius: 20px;
-    border: none;
-    
-    
-    text-align: center;
-    color: var(--baby-powder);
-    font-family: 'DM Sans';
-    font-size: 30px;
-    font-weight: bold;
 }
 
 .priceTag{
     background-color: var(--orange);
-
-    height: 50;
-    width: 140;
- 
-    border-radius: 20px;
-    border: none;
-    
-    
-    text-align: center;
-    color: var(--baby-powder);
-    font-family: 'DM Sans';
-    font-size: 30px;
-    font-weight: bold;
 }
 
 .allergenTag{
     background-color: var(--indian-red);
-
-    height: 50;
-    width: 140;
- 
-    border-radius: 20px;
-    border: none;
-    
-    
-    text-align: center;
-    color: var(--baby-powder);
-    font-family: 'DM Sans';
-    font-size: 30px;
-    font-weight: bold;
-}
+}    
 
 .mealTag{
     background-color: var(--fuchsia-rose);
-
-    height: 50;
-    width: 140;
- 
-    border-radius: 20px;
-    border: none;
-    
-    
-    text-align: center;
-    color: var(--baby-powder);
-    font-family: 'DM Sans';
-    font-size: 30px;
-    font-weight: bold;
 }
