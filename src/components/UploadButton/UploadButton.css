@@ -1,11 +1,11 @@
 .uploadBtn{ 
-    font-size: xx-large;
+    font-size: 80%;
     align-items: center;
-    width: 350px;
-    height: 350px;
+    width: stretch;
+    height: stretch;
     border: double 2px transparent;
     border-radius: 10px;
-     background-image: linear-gradient(white, white), radial-gradient(circle at top left, var(--indian-red),var(--orange));
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, var(--indian-red),var(--orange));
     background-origin: border-box;
     background-clip: padding-box, border-box;     
 }
