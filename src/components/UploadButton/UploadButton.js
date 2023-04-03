@@ -1,5 +1,5 @@
 import React from "react";
-import './uploadButton.css'; 
+import './UploadButton.css'; 
 import { Icon } from '@iconify/react';
 import { useState } from 'react'; 
 
