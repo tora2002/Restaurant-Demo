@@ -21,33 +21,23 @@
     cursor: pointer;
     animation: hoverAnimation 0.5s; 
     background-image: linear-gradient(to right bottom, var(--indian-red), var(--fuchsia-rose), var(--orange), var(--sun-glow));
-    /* background-image: linear-gradient(to right bottom, var(--vista-blue), var(--fuchsia-rose), var(--indian-red), var(--orange)); */
-    /* text-decoration: underline; */
 }
 
 @keyframes hoverAnimation {
     0% {
-        /* transform: rotate(5deg) translateX(5px); */
         background-image: linear-gradient(to right bottom, var(--sun-glow), var(--orange), var(--indian-red), var(--fuchsia-rose));
     }
     25% {
-        /* transform: rotate(0deg) translateX(0px); */
-        /* background-image: linear-gradient(to right bottom, var(--orange), var(--indian-red), var(--fuchsia-rose), var(--vista-blue)); */
         background-image: linear-gradient(to right bottom, var(--orange), var(--indian-red), var(--fuchsia-rose));
     }
     50% {
-        /* transform: rotate(5deg) translateX(5px); */
-        /* background-image: linear-gradient(to right bottom, var(--indian-red), var(--fuchsia-rose), var(--vista-blue), var(--fuchsia-rose)); */
         background-image: linear-gradient(to right bottom, var(--indian-red), var(--fuchsia-rose));
 
     }
     75% {
-        /* transform: rotate(0deg) translateX(0px); */
-        /* background-image: linear-gradient(to right bottom, var(--fuchsia-rose), var(--vista-blue), var(--fuchsia-rose), var(--indian-red)); */
         background-image: linear-gradient(to right bottom, var(--indian-red), var(--fuchsia-rose), var(--orange));
     }
     100% {
-        /* background-image: linear-gradient(to right bottom, var(--vista-blue), var(--fuchsia-rose), var(--indian-red), var(--orange)); */
         background-image: linear-gradient(to right bottom, var(--indian-red), var(--fuchsia-rose), var(--orange), var(--sun-glow));
     }
 }
