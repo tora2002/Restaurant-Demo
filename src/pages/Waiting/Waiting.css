@@ -1,0 +1,21 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.waiting-card-container {
+    width: 60%;
+    height: 70%;
+}
+
+.waiting-card-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.waiting-card-heading {
+    color: var(--orange);
+    font-size: 1s;
+    font-weight: 500;
+}
