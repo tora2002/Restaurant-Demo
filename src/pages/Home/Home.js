@@ -26,8 +26,7 @@ function Home() {
                                 onClickHandler={() => navigate("/login")}/>
                             </div>
                         </div>
-                    } 
-                    isFloating={true}/>
+                    } isFloating={true}/>
                 </div>
             </div>
         </>

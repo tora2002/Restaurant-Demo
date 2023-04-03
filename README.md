@@ -15,6 +15,10 @@ Database: MongoDB
 Figma File Link
 https://www.figma.com/file/OeC9MybkoIXMEPiW5FWtzT/TasteBuds-UI?t=JwCamBixfTPdBtBj-1
 
+## Project Specification
+Google Document link
+https://docs.google.com/document/d/1MkxFrGBecykA-c8DWRaSt4JIjT3l-FU1pYlGaPYc-0M/edit?usp=sharing
+
 ## App Runthrough
 A new user creates an account and logs into the app. They are now given the ability to create groups or upload new food to the database. When creating groups, they are provided with an URL that can be shared to their friends. Their friends can click on the link to join the group. The group creator has the ability to kick members and set preferences of food (Location, Price Range, Cuisine, Breakfast/Lunch/Dinner, Allergens). Once all friends are in the group and preferences have been set, the group owner clicks on "Start Matching!" button. This will redirect all members to the Swipe Page. Here, the members are prompted with a food cards (based on the preferences that were set previously) where they can choose to swipe left to drop the food or swipe right to like the food. Same ~20 cards will be displayed to each memeber. If a member finishes swiping early, they are redirected to the Waiting for Others Page. Once all members finish, they are all directed to the Final Decision Page where they are matched with a food card based on the card that was liked the most. Upon a tie, both cards will be shown. Now everyones happy :D.
 
