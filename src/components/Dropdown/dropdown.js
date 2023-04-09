@@ -1,6 +1,6 @@
 import React from "react";
 import "./Dropdown.css";
-const { useState, useEffect } = React;
+const { useState } = React;
 
 function Dropdown( {headerTxt, contents} ) {
   const [isOpen, setOpen] = useState(false);
@@ -13,10 +13,6 @@ function Dropdown( {headerTxt, contents} ) {
   const [selectedItem, setSelectedItem] = useState([]);
 
   const toggleDropdown = () => setOpen(!isOpen);
-
-  useEffect(() => {
-    console.log(selectedItem)
-  }, [selectedItem]);
 
   // append item to array if it doesn't already exist, else remove 
   const handleItemClick = (id) => {
