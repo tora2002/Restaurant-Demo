@@ -12,6 +12,7 @@ function Dropdown( {headerTxt, contents, selectedItems, setSelectedItems} ) {
     })));
 
   const toggleDropdown = () => setOpen(!isOpen);
+  
   // append item to array if it doesn't already exist, else remove 
   const handleItemClick = (id) => {
     if (!selectedItems.includes(id)) {
