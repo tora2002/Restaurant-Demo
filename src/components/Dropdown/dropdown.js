@@ -2,7 +2,7 @@ import React from "react";
 import "./Dropdown.css";
 const { useState } = React;
 
-function Dropdown( {headerTxt, contents} ) {
+function Dropdown( {headerTxt, contents, selectedItems, setSelectedItems} ) {
   const [isOpen, setOpen] = useState(false);
   const [items, setItem] = useState(contents.map( (content, index) =>
     ({
@@ -10,12 +10,8 @@ function Dropdown( {headerTxt, contents} ) {
       label: content,
       clicked: false
     })));
-  const [selectedItems, setSelectedItems] = useState([]);
 
   const toggleDropdown = () => setOpen(!isOpen);
-
-  const getSelectedItems = () => selectedItems;
-
   // append item to array if it doesn't already exist, else remove 
   const handleItemClick = (id) => {
     if (!selectedItems.includes(id)) {
@@ -47,7 +43,5 @@ function Dropdown( {headerTxt, contents} ) {
     </div>
   );
 };
-
-export { selectedItems };
 
 export default Dropdown;
