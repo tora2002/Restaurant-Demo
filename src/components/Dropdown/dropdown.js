@@ -10,17 +10,19 @@ function Dropdown( {headerTxt, contents} ) {
       label: content,
       clicked: false
     })));
-  const [selectedItem, setSelectedItem] = useState([]);
+  const [selectedItems, setSelectedItems] = useState([]);
 
   const toggleDropdown = () => setOpen(!isOpen);
 
+  const getSelectedItems = () => selectedItems;
+
   // append item to array if it doesn't already exist, else remove 
   const handleItemClick = (id) => {
-    if (!selectedItem.includes(id)) {
-      setSelectedItem([...selectedItem, id]);
+    if (!selectedItems.includes(id)) {
+      setSelectedItems([...selectedItems, id]);
       items[id].clicked = true;
     } else {
-      setSelectedItem(selectedItem.filter(item => item !== id))
+      setSelectedItems(selectedItems.filter(item => item !== id))
       items[id].clicked = false;
     }
   };
@@ -45,5 +47,7 @@ function Dropdown( {headerTxt, contents} ) {
     </div>
   );
 };
+
+export { selectedItems };
 
 export default Dropdown;
