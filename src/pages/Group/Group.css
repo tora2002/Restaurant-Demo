@@ -4,16 +4,10 @@ html, body {
 }
 
 .group-hero {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: start; */
-    /* justify-content: center; */
     padding-top: 80px;
     padding-bottom: 80px;
     padding-left: 70px;
     padding-right: 70px;
-    /* width: 100vw; */
-    /* height: 100vh; */
 }
 
 .group-title {
@@ -29,15 +23,12 @@ html, body {
     justify-content: space-between;
 }
 
-.leftCardContainer {
+.left-card-container {
     width: 65%;
     height: 425px;
 }
 
-.leftCardContent {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
+.left-card-content {
     justify-content: center;
 }
 
@@ -56,55 +47,6 @@ html, body {
     margin-right: 15px;
 }
 
-.filterBtn {
-    cursor: pointer;
-    background-color: transparent;
-    color: black;
-    border: 0px;
-    font-family: 'DM Sans';
-    font-size: 15px;
-    font-weight: 500;
-    text-align: center;
-}
-
-.filterClickedBtn {
-    cursor: pointer;
-    background-image: linear-gradient(to right bottom, var(--sun-glow), var(--orange), var(--indian-red), var(--fuchsia-rose));
-    color: white;
-    border: 0px;
-    font-family: 'DM Sans';
-    font-size: 15px;
-    font-weight: 500;
-    text-align: center;
-}
-
-.iconColor {
-    color: black;
-}
-
-/* .filterBtn:hover {
-    animation: hoverAnimation 0.5s; 
-    background-image: linear-gradient(to right bottom, var(--sun-glow), var(--orange), var(--indian-red), var(--fuchsia-rose));
-}
-
-@keyframes hoverAnimation {
-    0% {
-        background-image: white;
-    }
-    25% {
-        background-image: linear-gradient(to right bottom, white, white, white, var(--sun-glow));
-    }
-    50% {
-        background-image: linear-gradient(to right bottom, white, white, var(--sun-glow), var(--orange));
-    }
-    75% {
-        background-image: linear-gradient(to right bottom,  white, var(--sun-glow), var(--orange), var(--indian-red));
-    }
-    100% {
-        background-image: linear-gradient(to right bottom, var(--sun-glow), var(--orange), var(--indian-red), var(--fuchsia-rose));
-    }
-} */
-
 .cuisine {
     width: 7vw;
     height: 7vh;
@@ -112,16 +54,15 @@ html, body {
     margin-right: 15px;
 }
 
-.cuisineCardsContainer {
+.cuisine-cards-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
     margin-left: 0px;
     margin-bottom: 15px;
 }
 
-.cuisineRowContainer {
+.cuisine-row-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -130,14 +71,14 @@ html, body {
     margin-left: 0px;
 }
 
-.cuisineIndividualCard {
+.cuisine-individual-card {
     width: 220px;
     height: 150px;
     margin-left: 25px;
     margin-right: 25px;
 }
 
-.cuisineContent {
+.cuisine-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,7 +87,7 @@ html, body {
     padding: 0;
 }
 
-.cuisineImg {
+.mexican-food-img {
     width: 150px;
     height: 75px;
 
@@ -156,14 +97,64 @@ html, body {
     border-radius: 10px;
 }
 
-.priceRange {
+.american-food-img {
+    width: 150px;
+    height: 75px;
+
+    background-image: url('./images/american.jpg');
+    background-size: 150px;
+
+    border-radius: 10px;
+}
+
+.chinese-food-img {
+    width: 150px;
+    height: 75px;
+
+    background-image: url('./images/chinese.jpg');
+    background-size: 150px;
+
+    border-radius: 10px;
+}
+
+.japanese-food-img {
+    width: 150px;
+    height: 75px;
+
+    background-image: url('./images/japanese.jpg');
+    background-size: 150px;
+
+    border-radius: 10px;
+}
+
+.korean-food-img {
+    width: 150px;
+    height: 75px;
+
+    background-image: url('./images/korean.jpg');
+    background-size: 150px;
+
+    border-radius: 10px;
+}
+
+.indian-food-img {
+    width: 150px;
+    height: 75px;
+
+    background-image: url('./images/indian.jpg');
+    background-size: 150px;
+
+    border-radius: 10px;
+}
+
+.price-range {
     width: 9vw;
     height: 7vh;
     margin-left: 15px;
     margin-right: 15px;
 }
 
-.smallIndividualCard {
+.small-individual-card {
     width: 220px;
     height: 65px;
     margin-left: 25px;
@@ -177,31 +168,31 @@ html, body {
     margin-right: 15px;
 }
 
-.mealType {
+.meal-type {
     width: 9vw;
     height: 7vh;
     margin-left: 15px;
 }
 
-.rightCardContainer {
+.right-card-container {
     width: 30%;
     height: 425px;
 }
 
-.rightCardContent {
+.right-card-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.groupMemberTitle {
+.group-member-title {
     font-size: 20px;
     font-weight: 500;
     padding-top: 15px; /* it's not centering :( */
 }
 
-.memberProfile {
+.member-profile {
     width: 22vw;
     height: 4vh;
     margin-top: 10px;
@@ -215,10 +206,10 @@ html, body {
 
     border: solid 2px transparent;
     border-radius: 10px;
-    background-color: #F5F5F5; /* #F5F5F5 #ECECEC #EBECf0*/
+    background-color: #F5F5F5;
 }
 
-.memberName {
+.member-name {
     margin-left: 10px;
 }
 
@@ -230,14 +221,14 @@ html, body {
     margin-bottom: 15px;
 }
 
-.bottomCardContainer {
+.bottom-card-container {
     margin-top: 50px;
     margin-bottom: 0px;
     width: 65%;
     height: 100px;
 }
 
-.bottomCardContent {
+.bottom-card-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -247,7 +238,7 @@ html, body {
     margin-right: 60px;
 }
 
-.bottomCardTemplate {
+.bottom-card-template {
     width: 33vw;
     height: 4vh;
     border: solid 2px transparent;
@@ -257,7 +248,7 @@ html, body {
     margin-bottom: 15px;
 }
 
-.generateLink {
+.generate-link {
     cursor: pointer;
     background-color: transparent;
     color: var(--vista-blue);
@@ -270,7 +261,7 @@ html, body {
     margin-left: 0px;
 }
 
-.bottomRightButtonContainer {
+.bottom-right-button-container {
     margin-top: 50px;
     width: 30%;
     height: 100px;

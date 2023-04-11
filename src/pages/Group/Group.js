@@ -5,6 +5,7 @@ import Header from '../../components/Header/Header';
 import Card from '../../components/Card/Card';
 import Button from '../../components/Button/Button';
 import FilterButton from '../../components/FilterButton/FilterButton';
+import MemberInfo from '../../components/MemberInfo/MemberInfo';
 import { Icon } from '@iconify/react';
 
 function Group() {
@@ -14,11 +15,123 @@ function Group() {
     const [priceClicked, setPriceClicked] = useState(Array.from( {length: 3}, () => false ));
     const [dietClicked, setDietClicked] = useState(Array.from( {length: 6}, () => false));
     const [mealClicked, setMealclicked] = useState(Array.from( {length: 6}, () => false));
+    
+    const members = [
+        { name: 'Plexie' },
+        { name: 'Aneri the Amazing and Admirable' },
+        { name: 'Jerm Yoo' },
+        { name: 'Tye Tye' },
+        { name: 'Shaamer aka Mr. Worlwide' },
+    ];
+
+    const filters = [
+        { 
+            type: 'Cuisine',
+            className: 'cuisine',
+        },
+        { 
+            type: 'Price Range',
+            className: 'price-range',
+        },
+        { 
+            type: 'Diet and Allergens',
+            className: 'allergens',
+        },
+        { 
+            type: 'Meal Type',
+            className: 'meal-type',
+        },
+    ];
+
+    const cuisines = [
+        { 
+            type: 'Mexican',
+            img: 'mexican-food-img',
+        },
+        { 
+            type: 'American',
+            img: 'american-food-img',
+        },
+        { 
+            type: 'Chinese',
+            img: 'chinese-food-img',
+        },
+        { 
+            type: 'Japanese',
+            img: 'japanese-food-img',
+        },
+        { 
+            type: 'Korean',
+            img: 'korean-food-img',
+        },
+        { 
+            type: 'Indian',
+            img: 'indian-food-img',
+        },
+    ];
+
+    const priceRanges = [
+        { amount: '&lt; $15' },
+        { amount: '$15 - $25' },
+        { amount: '$25 &gt;' },
+    ];
+
+    const allergens = [
+        { 
+            type: 'Vegetarian',
+            img: '',
+        },
+        { 
+            type: 'Vegan',
+            img: '',
+        },
+        { 
+            type: 'Dairy / Gluten free',
+            img: '',
+        },
+        { 
+            type: 'Nuts',
+            img: '',
+        },
+        { 
+            type: 'Eggs',
+            img: '',
+        },
+        { 
+            type: 'Soy',
+            img: '',
+        },
+    ];
+
+    const meals = [
+        { 
+            type: 'Breakfast',
+            img: '',
+        },
+        { 
+            type: 'Lunch',
+            img: '',
+        },
+        { 
+            type: 'Dinner',
+            img: '',
+        },
+        { 
+            type: 'Brunch',
+            img: '',
+        },
+        { 
+            type: 'Snack',
+            img: '',
+        },
+        { 
+            type: 'Dessert',
+            img: '',
+        },
+    ];
 
     const handleSingleBtnColor = (arr, setArr, index) => {
-        const newBtnStyles = arr.map((value, currIndex) => {
-          return currIndex === index ? true : false;
-        });
+        const newBtnStyles = arr.map((value, currIndex) => currIndex === index ? true : false);
         setArr(newBtnStyles);
     };
 
@@ -28,78 +141,39 @@ function Group() {
         setArr(newMultiClick);
     };
 
+    const groupMembers = () => {
+        return (
+            <div className='right-card-content'>
+                <h2 className='group-member-title'>Group members: </h2>
+                {members.map((member, index) => (
+                    <MemberInfo key={index} name={member.name} />
+                ))}
+            </div>
+        );
+    };
+
+    const cuisineIndividualCards = cuisines.map((cuisine, index) => (
+        <div className='cuisine-individual-card'>
+            <FilterButton content={
+                <div className='cuisine-content'>
+                    <p>{cuisine.type}</p>
+                    <div className={cuisine.img}></div>
+                </div>
+                } 
+            onClickHandler={() => handleMultiClick(cuisineClicked, setCuisineClicked, index)}
+            onFilter={cuisineClicked[index]}
+            />
+        </div>
+    ));
+
     const cuisineCards = () => {
         return (
-            <div className='cuisineCardsContainer'>
-                <div className='cuisineRowContainer'>
-                    <div className='cuisineIndividualCard'>
-                        <FilterButton content={
-                            <div className='cuisineContent'>
-                                <p>Mexican</p>
-                                <div className='cuisineImg'></div>
-                            </div>
-                        } 
-                        onClickHandler={() => handleMultiClick(cuisineClicked, setCuisineClicked, 0)}
-                        onFilter={cuisineClicked[0]}
-                        />
-                    </div>
-                    <div className='cuisineIndividualCard'>
-                        <FilterButton content={
-                            <div className='cuisineContent'>
-                                <p>American</p>
-                                <div className='cuisineImg'></div>
-                            </div>
-                        } 
-                        onClickHandler={() => handleMultiClick(cuisineClicked, setCuisineClicked, 1)}
-                        onFilter={cuisineClicked[1]}
-                        />
-                    </div>
-                    <div className='cuisineIndividualCard'>
-                        <FilterButton content={
-                            <div className='cuisineContent'>
-                                <p>Chinese</p>
-                                <div className='cuisineImg'></div>
-                            </div>
-                        } 
-                        onClickHandler={() => handleMultiClick(cuisineClicked, setCuisineClicked, 2)}
-                        onFilter={cuisineClicked[2]}
-                        />
-                    </div>
+            <div className='cuisine-cards-container'>
+                <div className='cuisine-row-container'>
+                    {cuisineIndividualCards.slice(0, cuisineIndividualCards.length/2)}
                 </div>
-                <div className='cuisineRowContainer'>
-                    <div className='cuisineIndividualCard'>
-                        <FilterButton content={
-                            <div className='cuisineContent'>
-                                <p>Japanese</p>
-                                <div className='cuisineImg'></div>
-                            </div>
-                        } 
-                        onClickHandler={() => handleMultiClick(cuisineClicked, setCuisineClicked, 3)}
-                        onFilter={cuisineClicked[3]}
-                        />
-                    </div>
-                    <div className='cuisineIndividualCard'>
-                        <FilterButton content={
-                            <div className='cuisineContent'>
-                                <p>Korean</p>
-                                <div className='cuisineImg'></div>
-                            </div>
-                        } 
-                        onClickHandler={() => handleMultiClick(cuisineClicked, setCuisineClicked, 4)}
-                        onFilter={cuisineClicked[4]}
-                        />
-                    </div>
-                    <div className='cuisineIndividualCard'>
-                        <FilterButton content={
-                            <div className='cuisineContent'>
-                                <p>Mediterranean</p>
-                                <div className='cuisineImg'></div>
-                            </div>
-                        } 
-                        onClickHandler={() => handleMultiClick(cuisineClicked, setCuisineClicked, 5)}
-                        onFilter={cuisineClicked[5]}
-                        />
-                    </div>
+                <div className='cuisine-row-container'>
+                    {cuisineIndividualCards.slice(cuisineIndividualCards.length/2)}
                 </div>
             </div>
         );
@@ -107,178 +181,70 @@ function Group() {
 
     const priceRangeCards = () => {
         return (
-            <div className='cuisineRowContainer'>
-                <div className='smallIndividualCard'>
-                    <FilterButton content={
-                        <div>
-                            <p>&lt; $15</p>
-                        </div>
-                    } 
-                    onClickHandler={() => handleSingleBtnColor(priceClicked, setPriceClicked, 0)}
-                    onFilter={priceClicked[0]}
-                    />
-                </div>
-                <div className='smallIndividualCard'>
-                    <FilterButton content={
-                        <div>
-                            <p>$15 - $25</p>
-                        </div>
-                    } 
-                    onClickHandler={() => handleSingleBtnColor(priceClicked, setPriceClicked, 1)}
-                    onFilter={priceClicked[1]}
-                    />
-                </div>
-                <div className='smallIndividualCard'>
-                    <FilterButton content={
-                        <div>
-                            <p>$25 &gt;</p>
-                        </div>
-                    } 
-                    onClickHandler={() => handleSingleBtnColor(priceClicked, setPriceClicked, 2)}
-                    onFilter={priceClicked[2]}
-                    />
-                </div>
+            <div className='cuisine-row-container'>
+                {priceRanges.map((priceRange, index) => (
+                    <div className='small-individual-card'>
+                        <FilterButton content={
+                            <div>
+                                <p>{priceRange.amount}</p>
+                            </div>
+                            } 
+                        onClickHandler={() => handleSingleBtnColor(priceClicked, setPriceClicked, index)}
+                        onFilter={priceClicked[index]}
+                        />
+                    </div>
+                ))}
             </div>
         );
     };
+
+    const allergensIndividualCards = allergens.map((allergen, index) => (
+        <div className='cuisine-individual-card'>
+            <FilterButton content={
+                <div>
+                    <p>{allergen.type}</p>
+                </div>
+                } 
+                onClickHandler={() => handleMultiClick(dietClicked, setDietClicked, index)}
+                onFilter={dietClicked[index]}
+            />
+        </div>
+    ));
 
     const allergensCards = () => {
         return (
-            <div className='cuisineCardsContainer'>
-                <div className='cuisineRowContainer'>
-                    <div className='cuisineIndividualCard'>
-                        <FilterButton content={
-                            <div>
-                                <p>Vegetarian</p>
-                            </div>
-                        } 
-                        onClickHandler={() => handleMultiClick(dietClicked, setDietClicked, 0)}
-                        onFilter={dietClicked[0]}
-                        />
-                    </div>
-                    <div className='cuisineIndividualCard'>
-                        <FilterButton content={
-                            <div>
-                                <p>Vegan</p>
-                            </div>
-                        } 
-                        onClickHandler={() => handleMultiClick(dietClicked, setDietClicked, 1)}
-                        onFilter={dietClicked[1]}
-                        />
-                    </div>
-                    <div className='cuisineIndividualCard'>
-                        <FilterButton content={
-                            <div>
-                                <p>Dairy / Gluten free</p>
-                            </div>
-                        } 
-                        onClickHandler={() => handleMultiClick(dietClicked, setDietClicked, 2)}
-                        onFilter={dietClicked[2]}
-                        />
-                    </div>
+            <div className='cuisine-cards-container'>
+                <div className='cuisine-row-container'>
+                    {allergensIndividualCards.slice(0, allergensIndividualCards.length/2)}
                 </div>
-                <div className='cuisineRowContainer'>
-                    <div className='cuisineIndividualCard'>
-                        <FilterButton content={
-                            <div>
-                                <p>Nuts</p>
-                            </div>
-                        } 
-                        onClickHandler={() => handleMultiClick(dietClicked, setDietClicked, 3)}
-                        onFilter={dietClicked[3]}
-                        />
-                    </div>
-                    <div className='cuisineIndividualCard'>
-                        <FilterButton content={
-                            <div>
-                                <p>Eggs</p>
-                            </div>
-                        } 
-                        onClickHandler={() => handleMultiClick(dietClicked, setDietClicked, 4)}
-                        onFilter={dietClicked[4]}
-                        />
-                    </div>
-                    <div className='cuisineIndividualCard'>
-                        <FilterButton content={
-                            <div>
-                                <p>Soy</p>
-                            </div>
-                        } 
-                        onClickHandler={() => handleMultiClick(dietClicked, setDietClicked, 5)}
-                        onFilter={dietClicked[5]}
-                        />
-                    </div>
+                <div className='cuisine-row-container'>
+                    {allergensIndividualCards.slice(allergensIndividualCards.length/2)}
                 </div>
             </div>
         );
     };
 
+    const mealsIndividualCards = meals.map((meal, index) => (
+        <div className='cuisine-individual-card'>
+            <FilterButton content={
+                <div>
+                    <p>{meal.type}</p>
+                </div>
+                } 
+                onClickHandler={() => handleMultiClick(mealClicked, setMealclicked, index)}
+                onFilter={mealClicked[index]}
+                />
+        </div>
+    ));
+
     const mealCards = () => {
         return (
-            <div className='cuisineCardsContainer'>
-                <div className='cuisineRowContainer'>
-                    <div className='cuisineIndividualCard'>
-                        <FilterButton content={
-                            <div>
-                                <p>Breakfast</p>
-                            </div>
-                        } 
-                        onClickHandler={() => handleMultiClick(mealClicked, setMealclicked, 0)}
-                        onFilter={mealClicked[0]}
-                        />
-                    </div>
-                    <div className='cuisineIndividualCard'>
-                        <FilterButton content={
-                            <div>
-                                <p>Lunch</p>
-                            </div>
-                        } 
-                        onClickHandler={() => handleMultiClick(mealClicked, setMealclicked, 1)}
-                        onFilter={mealClicked[1]}
-                        />
-                    </div>
-                    <div className='cuisineIndividualCard'>
-                        <FilterButton content={
-                            <div>
-                                <p>Dinner</p>
-                            </div>
-                        } 
-                        onClickHandler={() => handleMultiClick(mealClicked, setMealclicked, 2)}
-                        onFilter={mealClicked[2]}
-                        />
-                    </div>
+            <div className='cuisine-cards-container'>
+                <div className='cuisine-row-container'>
+                    {mealsIndividualCards.slice(0, mealsIndividualCards.length/2)}
                 </div>
-                <div className='cuisineRowContainer'>
-                    <div className='cuisineIndividualCard'>
-                        <FilterButton content={
-                            <div>
-                                <p>Brunch</p>
-                            </div>
-                        } 
-                        onClickHandler={() => handleMultiClick(mealClicked, setMealclicked, 3)}
-                        onFilter={mealClicked[3]}
-                        />
-                    </div>
-                    <div className='cuisineIndividualCard'>
-                        <FilterButton content={
-                            <div>
-                                <p>Snack</p>
-                            </div>
-                        } 
-                        onClickHandler={() => handleMultiClick(mealClicked, setMealclicked, 4)}
-                        onFilter={mealClicked[4]}
-                        />
-                    </div>
-                    <div className='cuisineIndividualCard'>
-                        <FilterButton content={
-                            <div>
-                                <p>Dessert</p>
-                            </div>
-                        } 
-                        onClickHandler={() => handleMultiClick(mealClicked, setMealclicked, 5)}
-                        onFilter={mealClicked[5]}
-                        />
-                    </div>
+                <div className='cuisine-row-container'>
+                    {mealsIndividualCards.slice(mealsIndividualCards.length/2)}
                 </div>
             </div>
         );
@@ -290,9 +256,9 @@ function Group() {
             <div className='group-hero'>
                 <h1 className='group-title'>Choose your preferences and create your group</h1>
                 <div className='group-cards'>
-                    <div className='leftCardContainer'>
+                    <div className='left-card-container'>
                         <Card content={
-                            <div className='leftCardContent'>
+                            <div className='left-card-content'>
                                 <div className='group-filters'>
                                     <div className='filter'>
                                         <Card content={
@@ -301,38 +267,16 @@ function Group() {
                                         isFloating={true}
                                         />
                                     </div>
-                                    <div className='cuisine'>
-                                        <FilterButton content={
-                                            <p>Cuisine</p>
-                                        } 
-                                        onClickHandler={() => handleSingleBtnColor(filterBtnStyles, setFilterBtnStyles, 0)}
-                                        onFilter={filterBtnStyles[0]}
-                                        />
-                                    </div>
-                                    <div className='priceRange'>
-                                        <FilterButton content={
-                                            <p>Price Range</p>
-                                        } 
-                                        onClickHandler={() => handleSingleBtnColor(filterBtnStyles, setFilterBtnStyles, 1)}
-                                        onFilter={filterBtnStyles[1]}
-                                        />
-                                    </div>
-                                    <div className='allergens'>
-                                        <FilterButton content={
-                                            <p>Diet and Allergens</p>
-                                        } 
-                                        onClickHandler={() => handleSingleBtnColor(filterBtnStyles, setFilterBtnStyles, 2)}
-                                        onFilter={filterBtnStyles[2]}
-                                        />
-                                    </div>
-                                    <div className='mealType'>
-                                        <FilterButton content={
-                                            <p>Meal Type</p>
-                                        } 
-                                        onClickHandler={() => handleSingleBtnColor(filterBtnStyles, setFilterBtnStyles, 3)}
-                                        onFilter={filterBtnStyles[3]}
-                                        />
-                                    </div>
+                                    {filters.map((filter, index) => (
+                                        <div className={filter.className}>
+                                            <FilterButton content={
+                                                <p>{filter.type}</p>
+                                            } 
+                                            onClickHandler={() => handleSingleBtnColor(filterBtnStyles, setFilterBtnStyles, index)}
+                                            onFilter={filterBtnStyles[index]}
+                                            />
+                                        </div>
+                                    ))}
                                 </div>
                                 {filterBtnStyles[0] ? cuisineCards() : null}
                                 {filterBtnStyles[1] ? priceRangeCards() : null}
@@ -341,44 +285,22 @@ function Group() {
                             </div>
                         }/>
                     </div>
-                    <div className='rightCardContainer'>
+                    <div className='right-card-container'>
                         <Card content={
-                            <div className='rightCardContent'>
-                                <h2 className='groupMemberTitle'>Group members: </h2>
-                                <div className='memberProfile'>
-                                    <Icon fontSize={30} icon='iconoir:profile-circle' color='black' />
-                                    <p className='memberName'>Plexie</p>
-                                </div>
-                                <div className='memberProfile'>
-                                    <Icon fontSize={30} icon='iconoir:profile-circle' color='black' />
-                                    <p className='memberName'>Aneri the Amazing and Admirable</p>
-                                </div>
-                                <div className='memberProfile'>
-                                    <Icon fontSize={30} icon='iconoir:profile-circle' color='black' />
-                                    <p className='memberName'>Jerm Yoo</p>
-                                </div>
-                                <div className='memberProfile'>
-                                    <Icon fontSize={30} icon='iconoir:profile-circle' color='black' />
-                                    <p className='memberName'>Tye Tye</p>
-                                </div>
-                                <div className='memberProfile'>
-                                    <Icon fontSize={30} icon='iconoir:profile-circle' color='black' />
-                                    <p className='memberName'>Shaamer aka Mr. Worldwide</p>
-                                </div>
-                            </div>
+                            groupMembers()
                         }/>
                     </div>
                 </div>
                 <div className='group-cards'>
-                    <div className='bottomCardContainer'>
+                    <div className='bottom-card-container'>
                         <Card content={
-                            <div className='bottomCardContent'>
-                                <button className='generateLink'>Generate Group Link: </button>
-                                <div className='bottomCardTemplate'></div>
+                            <div className='bottom-card-content'>
+                                <button className='generate-link'>Generate Group Link: </button>
+                                <div className='bottom-card-template'></div>
                             </div>
                         }/>
                     </div>
-                    <div className='bottomRightButtonContainer'><Button text={
+                    <div className='bottom-right-button-container'><Button text={
                         <p>Ready to swipe!</p>
                     }
                     onClickHandler={() => navigate("/swipe")}/>
