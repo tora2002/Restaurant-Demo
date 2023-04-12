@@ -24,6 +24,7 @@ html, body {
     margin-top: 0;
     margin-bottom: 0;
 
+    text-align: center;
     color: var(--orange);
     font-size: 4em;
     font-weight: 500;
@@ -39,7 +40,17 @@ html, body {
 }
 
 .waiting-card-hero {
+    width: 50%;
+}
 
-    width: 80%;
-    height: 50%;
+@media only screen and (max-width: 400px) {
+    .waiting-card-heading {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .waiting-card-hero {
+        width: 60%;
+    }
 }

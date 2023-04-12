@@ -13,7 +13,7 @@ function Waiting() {
                     <div className='waiting-card-contents'>
                         <h1 className='waiting-card-heading'>Chill <span>Out</span></h1>
                         <h3 className='waiting-card-subheading'>Your friends ain't as fast as you boi. While you friends finish matching, go touch some grass</h3>
-                        <img className='waiting-card-hero' src={hero}/>
+                        <img className='waiting-card-hero' src={hero} alt='cows' />
                     </div>
                 }/>
             </div>
