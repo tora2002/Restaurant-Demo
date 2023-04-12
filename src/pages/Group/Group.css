@@ -91,7 +91,7 @@ html, body {
     width: 150px;
     height: 75px;
 
-    background-image: url('./images/mexican.jpeg');
+    background-image: url('../../assets/group-mexican.jpeg');
     background-size: 150px;
 
     border-radius: 10px;
@@ -101,7 +101,7 @@ html, body {
     width: 150px;
     height: 75px;
 
-    background-image: url('./images/american.jpg');
+    background-image: url('../../assets/group-american.jpg');
     background-size: 150px;
 
     border-radius: 10px;
@@ -111,7 +111,7 @@ html, body {
     width: 150px;
     height: 75px;
 
-    background-image: url('./images/chinese.jpg');
+    background-image: url('../../assets/group-chinese.jpg');
     background-size: 150px;
 
     border-radius: 10px;
@@ -121,7 +121,7 @@ html, body {
     width: 150px;
     height: 75px;
 
-    background-image: url('./images/japanese.jpg');
+    background-image: url('../../assets/group-japanese.jpg');
     background-size: 150px;
 
     border-radius: 10px;
@@ -131,7 +131,7 @@ html, body {
     width: 150px;
     height: 75px;
 
-    background-image: url('./images/korean.jpg');
+    background-image: url('../../assets/group-korean.jpg');
     background-size: 150px;
 
     border-radius: 10px;
@@ -141,7 +141,7 @@ html, body {
     width: 150px;
     height: 75px;
 
-    background-image: url('./images/indian.jpg');
+    background-image: url('../../assets/group-indian.jpg');
     background-size: 150px;
 
     border-radius: 10px;
