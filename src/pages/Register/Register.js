@@ -5,16 +5,17 @@ import Header from '../../components/Header/Header';
 import Card from '../../components/Card/Card';
 import Button from '../../components/Button/Button';
 import Input from '../../components/Input/Input';
+import UploadButton from '../../components/UploadButton/UploadButton';
 
 function Register() {
     return(
     <>
         <Header />
-            <div className='mainContainer'>
-                <div className='cardContainer'>
+            <div className='register-mainContainer'>
+                <div className='register-cardContainer'>
                     <Card content={
-                        <div className='cardContent'>
-                            <div className='inputContainer'>
+                        <div className='register-cardContent'>
+                             <div className='register-inputContainer'>
                                 <Input 
                                         placeholder={'email'}
                                 />
@@ -23,24 +24,25 @@ function Register() {
                                 />
                             </div>
 
-                            <div className='inputContainer'>
+                            <div className='register-inputContainer'>
                                 <Input placeholder={'password'}
                                 />
                                 <Input placeholder={'username'}
                                 />
                             </div>
-                            <div className='inputContainer1'>
+                            <div className='register-inputContainer1'>
                                 <div className='description'>    
                                     <Input 
                                             placeholder={'description (250 words max)'}                                           
                                         />
                                 </div>
-                                <div className='upload'>    
-                                    {/* Need Help Implementing the upload button */}
-                                </div>
+                               <div className='upload'>
+                                    <UploadButton />    
+                                    {/* Need Help Implementing the upload button*/}
+                                </div> 
                                 
                             </div>
-                            <div className='buttonContainer'>
+                            <div className='register-buttonContainer'>
                                 <Button text={
                                     <p className='buttonText'>Register</p>
                                 }
