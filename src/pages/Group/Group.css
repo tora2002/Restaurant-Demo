@@ -23,12 +23,12 @@ html, body {
     justify-content: space-between;
 }
 
-.left-card-container {
+.group-left-card-container {
     width: 65%;
     height: 425px;
 }
 
-.left-card-content {
+.group-left-card-content {
     justify-content: center;
 }
 
@@ -40,21 +40,21 @@ html, body {
     margin-left: 10px;
 }
 
-.filter {
+.group-filter {
     width: 4vw;
     height: 7vh;
     margin-left: 30px;
     margin-right: 15px;
 }
 
-.cuisine {
+.group-cuisine {
     width: 7vw;
     height: 7vh;
     margin-left: 15px;
     margin-right: 15px;
 }
 
-.cuisine-cards-container {
+.group-cuisine-cards-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,7 +62,7 @@ html, body {
     margin-bottom: 15px;
 }
 
-.cuisine-row-container {
+.group-cuisine-row-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -71,14 +71,14 @@ html, body {
     margin-left: 0px;
 }
 
-.cuisine-individual-card {
+.group-cuisine-individual-card {
     width: 220px;
     height: 150px;
     margin-left: 25px;
     margin-right: 25px;
 }
 
-.cuisine-content {
+.group-cuisine-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,7 +87,7 @@ html, body {
     padding: 0;
 }
 
-.mexican-food-img {
+.group-mexican-food-img {
     width: 150px;
     height: 75px;
 
@@ -97,7 +97,7 @@ html, body {
     border-radius: 10px;
 }
 
-.american-food-img {
+.group-american-food-img {
     width: 150px;
     height: 75px;
 
@@ -107,7 +107,7 @@ html, body {
     border-radius: 10px;
 }
 
-.chinese-food-img {
+.group-chinese-food-img {
     width: 150px;
     height: 75px;
 
@@ -117,7 +117,7 @@ html, body {
     border-radius: 10px;
 }
 
-.japanese-food-img {
+.group-japanese-food-img {
     width: 150px;
     height: 75px;
 
@@ -127,7 +127,7 @@ html, body {
     border-radius: 10px;
 }
 
-.korean-food-img {
+.group-korean-food-img {
     width: 150px;
     height: 75px;
 
@@ -137,7 +137,7 @@ html, body {
     border-radius: 10px;
 }
 
-.indian-food-img {
+.group-indian-food-img {
     width: 150px;
     height: 75px;
 
@@ -147,39 +147,39 @@ html, body {
     border-radius: 10px;
 }
 
-.price-range {
+.group-price-range {
     width: 9vw;
     height: 7vh;
     margin-left: 15px;
     margin-right: 15px;
 }
 
-.small-individual-card {
+.group-small-individual-card {
     width: 220px;
     height: 65px;
     margin-left: 25px;
     margin-right: 25px;
 }
 
-.allergens {
+.group-allergens {
     width: 13vw;
     height: 7vh;
     margin-left: 15px;
     margin-right: 15px;
 }
 
-.meal-type {
+.group-meal-type {
     width: 9vw;
     height: 7vh;
     margin-left: 15px;
 }
 
-.right-card-container {
+.group-right-card-container {
     width: 30%;
     height: 425px;
 }
 
-.right-card-content {
+.group-right-card-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -192,43 +192,14 @@ html, body {
     padding-top: 15px; /* it's not centering :( */
 }
 
-.member-profile {
-    width: 22vw;
-    height: 4vh;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 3px;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: left;
-
-    border: solid 2px transparent;
-    border-radius: 10px;
-    background-color: #F5F5F5;
-}
-
-.member-name {
-    margin-left: 10px;
-}
-
-.template {
-    width: 22vw;
-    height: 4vh;
-    background-color: lightgray;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.bottom-card-container {
+.group-bottom-card-container {
     margin-top: 50px;
     margin-bottom: 0px;
     width: 65%;
     height: 100px;
 }
 
-.bottom-card-content {
+.group-bottom-card-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -238,7 +209,7 @@ html, body {
     margin-right: 60px;
 }
 
-.bottom-card-template {
+.group-bottom-card-template {
     width: 33vw;
     height: 4vh;
     border: solid 2px transparent;
@@ -248,7 +219,7 @@ html, body {
     margin-bottom: 15px;
 }
 
-.generate-link {
+.group-generate-link {
     cursor: pointer;
     background-color: transparent;
     color: var(--vista-blue);
@@ -261,7 +232,7 @@ html, body {
     margin-left: 0px;
 }
 
-.bottom-right-button-container {
+.group-bottom-right-button-container {
     margin-top: 50px;
     width: 30%;
     height: 100px;
