@@ -1,23 +1,23 @@
-.mainContainer{
+.login-mainContainer{
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.cardContainer {
+.login-cardContainer {
     width: 45%;
     height: 350px;
 }
 
-.cardContent {
+.login-cardContent {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.cardText {
+.login-textContainer{
     width: 100%;
     height: 100%;
     display: flex;
@@ -26,31 +26,37 @@
     align-items: center;
 }
 
-.heading {
+
+.login-heading {
     margin-top: 0;
     margin-bottom: 0px;
     color: var(--orange);
-    font-size: 500%;
+    font-size: 400%;
     font-weight: 500;
 }
 
-.buttonContainer {
+.login-buttonContainer {
     width: 55%;
-    height: 60px;
+    height: 5em;
     margin-top: 15px;
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-.buttonText {
+.login-buttonText {
     margin-top: 0;
     margin-bottom: 0;
     font-size: 1.25rem;
 }
 
-button:hover {
-    cursor: pointer;
+.login-username{
+    height: 120px;
 }
+
+.login-username{
+    height: 30px;
+}
+
 
 

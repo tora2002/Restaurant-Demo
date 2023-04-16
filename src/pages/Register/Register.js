@@ -38,7 +38,6 @@ function Register() {
                                 </div>
                                <div className='upload'>
                                     <UploadButton />    
-                                    {/* Need Help Implementing the upload button*/}
                                 </div> 
                                 
                             </div>

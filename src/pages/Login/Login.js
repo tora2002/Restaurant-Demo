@@ -11,23 +11,23 @@ function Login() {
     return(
         <>
         <Header />
-            <div className='mainContainer'>
-                <div className='cardContainer'>
+            <div className='login-mainContainer'>
+                <div className='login-cardContainer'>
                     <Card content={
-                        <div className='cardContent'>
-                            <div className='cardText'>
-                                <h1 className='heading'>Taste<span>Buds</span></h1>
-                            </div>
-                            <div className='username'>
-                                <Input placeholder={'username'}
+                        <div className='login-cardContent'>
+                            <div className = "login-textContainer">
+                                <h1 className='login-heading'>Taste<span>Buds</span></h1>
+                            </div>    
+                            <div className='login-username'>
+                                <Input className='login-username1' placeholder={'username'}
                                 />
                             </div>
-                            <div className='password'>
+                            <div className='login-password'>
                                 <Input placeholder={'password'}
                                 />   
                             </div>
 
-                            <div className='buttonContainer'>
+                            <div className='login-buttonContainer'>
                                 <Button text={
                                     <p className='buttonText'>Login</p>
                                 }
