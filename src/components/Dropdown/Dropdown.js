@@ -29,8 +29,8 @@ function Dropdown( {headerTxt, contents, selectedItems, setSelectedItems} ) {
       <div className={`dropdown-header ${isOpen && "open"}`} onClick={toggleDropdown}>
         {headerTxt}
       </div>
-      <div className={`dropdown-body`}>
-        {isOpen && items.map((item) => (
+      {isOpen && <div className={`dropdown-body`}>
+        {items.map((item) => (
           <div
             className={`dropdown-item ${item.clicked && "clicked"}`}
             onClick={(e) => handleItemClick(e.target.id)}
@@ -40,7 +40,7 @@ function Dropdown( {headerTxt, contents, selectedItems, setSelectedItems} ) {
             {item.label}
           </div>
         ))}
-      </div>
+      </div>}
     </div>
   );
 };
