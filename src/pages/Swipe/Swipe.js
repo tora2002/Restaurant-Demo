@@ -32,15 +32,15 @@ export default function Swipe() {
     return (
         <>
           <Header/>
-          <div className='pagey'>
+          <div className='swipe-heading'>
               <h1 className='heading'>Swipe<span>Ripe</span></h1>
                   <Card className='beigeCard' content={
                     <>
                         <div className='cardyContainer'>
-                          {/* Traversing through cards array using map function
-                            and populating card with different image and color */}
+                          
                           {cards.map((card) => (
                             <FoodCard image={card.image} color={card.color} />
+                            
                           ))}
                       </div> 
                     </>
@@ -53,6 +53,5 @@ export default function Swipe() {
     )
   }
   
-  // ReactDOM.render(<Swipe />, document.getElementById('root'));
 
 

@@ -13,13 +13,12 @@ html, body {
     box-shadow: 1px 2px 9px lightgray;
 }
 
-.pagey {
+.swipe-heading{
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* align-content: top; */
 }
 
 .swipeCardContent {

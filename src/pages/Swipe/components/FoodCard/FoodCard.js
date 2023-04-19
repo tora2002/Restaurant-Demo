@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './FoodCard.css';
-import { motion , useMotionValue, useTransform, useAnimation } from 'framer-motion';
+import { motion , useMotionValue, useTransform, useAnimation,  } from 'framer-motion';
 
   
 // Card component with destructured props
@@ -36,7 +36,7 @@ function FoodCard({image, menuName, location, description, tags, color}) {
     backgroundColor: color,
     boxShadow: '5px 10px 18px #888888',
     borderRadius: 10,
-    height: 300
+    height: 250
   };
   
   return (
@@ -51,7 +51,7 @@ function FoodCard({image, menuName, location, description, tags, color}) {
         dragConstraints={{ left: -1000, right: 1000 }}
         style={style}
         onDragEnd={(event, info) => {
-          
+          console.log(motionValue, 'info point x')
           // If the card is dragged only upto 150 on x-axis
           // bring it back to initial position
           if (Math.abs(info.point.x) <= 150) {
