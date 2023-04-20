@@ -2,11 +2,11 @@ import React from 'react'
 import './MemberInfo.css'
 import { Icon } from '@iconify/react';
 
-function MemberInfo ( {name} ) {
+function MemberInfo ( {name, nameStyle} ) {
     return (
         <div className='member-profile'>
             <Icon fontSize={30} icon='iconoir:profile-circle' color='black' />
-            <p className='member-name'>{name}</p>
+            <p className={nameStyle}>{name}</p>
         </div>
     );
 }

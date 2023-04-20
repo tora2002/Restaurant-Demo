@@ -1,6 +1,7 @@
 .defaultFilterBtn {
-    width: stretch;
-    height: stretch;
+    width: 100%;
+    min-width: 100px;
+    height: 100%;
 
     background-color: white;
 
@@ -20,8 +21,9 @@
 }
 
 .onFilterBtn {
-    width: stretch;
-    height: stretch;
+    width: 100%;
+    min-width: 100px;
+    height: 100%;
 
     background-image: linear-gradient(to right bottom, var(--sun-glow), var(--orange), var(--indian-red), var(--fuchsia-rose));
 

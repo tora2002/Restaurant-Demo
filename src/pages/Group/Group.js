@@ -18,10 +18,14 @@ function Group() {
     
     const members = [
         { name: 'Plexie' },
-        { name: 'Aneri the Amazing and Admirable' },
+        { name: 'Aneri <3' },
         { name: 'Jerm Yoo' },
         { name: 'Tye Tye' },
-        { name: 'Shaamer aka Mr. Worlwide' },
+        { name: 'Shaamer :)' },
+        { name: 'Plexie' },
+        { name: 'Plexie' },
+        { name: 'Plexie' },
+        { name: 'Plexie' },
     ];
 
     const filters = [
@@ -146,7 +150,7 @@ function Group() {
             <div className='group-right-card-content'>
                 <h2 className='group-member-title'>Group members: </h2>
                 {members.map((member, index) => (
-                    <MemberInfo key={index} name={member.name} />
+                    <MemberInfo key={index} nameStyle='group-member-names' name={member.name} /> 
                 ))}
             </div>
         );
@@ -181,6 +185,7 @@ function Group() {
 
     const priceRangeCards = () => {
         return (
+            <>
             <div className='group-cuisine-row-container'>
                 {priceRanges.map((priceRange, index) => (
                     <div className='group-small-individual-card'>
@@ -195,6 +200,8 @@ function Group() {
                     </div>
                 ))}
             </div>
+            <div className='group-cuisine-row-container'></div>
+            </>
         );
     };
 
@@ -262,7 +269,7 @@ function Group() {
                                 <div className='group-filters'>
                                     <div className='group-filter'>
                                         <Card content={
-                                            <Icon fontSize={30} icon='material-symbols:filter-list-rounded' color='black' />
+                                            <Icon className='group-filter-icon' fontSize={30} icon='material-symbols:filter-list-rounded' color='black' />
                                         }
                                         isFloating={true}
                                         />
@@ -270,7 +277,7 @@ function Group() {
                                     {filters.map((filter, index) => (
                                         <div className={filter.className}>
                                             <FilterButton content={
-                                                <p>{filter.type}</p>
+                                                <p className='group-filter-font'>{filter.type}</p>
                                             } 
                                             onClickHandler={() => handleSingleBtnColor(filterBtnStyles, setFilterBtnStyles, index)}
                                             onFilter={filterBtnStyles[index]}
@@ -278,17 +285,17 @@ function Group() {
                                         </div>
                                     ))}
                                 </div>
-                                {filterBtnStyles[0] ? cuisineCards() : null}
-                                {filterBtnStyles[1] ? priceRangeCards() : null}
-                                {filterBtnStyles[2] ? allergensCards() : null}
-                                {filterBtnStyles[3] ? mealCards() : null}
+                                <div className='group-content-cards'>
+                                    {filterBtnStyles[0] && cuisineCards()}
+                                    {filterBtnStyles[1] && priceRangeCards()}
+                                    {filterBtnStyles[2] && allergensCards()}
+                                    {filterBtnStyles[3] && mealCards()}
+                                </div>
                             </div>
                         }/>
                     </div>
                     <div className='group-right-card-container'>
-                        <Card content={
-                            groupMembers()
-                        }/>
+                        {groupMembers()}
                     </div>
                 </div>
                 <div className='group-cards'>
@@ -301,7 +308,7 @@ function Group() {
                         }/>
                     </div>
                     <div className='group-bottom-right-button-container'><Button text={
-                        <p>Ready to swipe!</p>
+                        <p className='group-button-font'>Ready to swipe!</p>
                     }
                     onClickHandler={() => navigate("/swipe")}/>
                     </div>
