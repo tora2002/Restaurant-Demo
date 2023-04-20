@@ -17,33 +17,39 @@ function Register() {
                         <div className='register-cardContent'>
                              <div className='register-inputContainer'>
                                 <Input 
-                                        placeholder={'email'}
+                                    className={'register-button'}
+                                    placeholder={'email'}
                                 />
                                 <Input 
+                                    className={'register-button'}
                                     placeholder={'confirm password'}
                                 />
                             </div>
 
                             <div className='register-inputContainer'>
-                                <Input placeholder={'password'}
+                                <Input
+                                    className={'register-button'} 
+                                    placeholder={'password'}
                                 />
-                                <Input placeholder={'username'}
+                                <Input 
+                                    className={'register-button'}
+                                    placeholder={'username'}
                                 />
                             </div>
                             <div className='register-inputContainer1'>
-                                <div className='description'>    
-                                    <Input 
-                                            placeholder={'description (250 words max)'}                                           
+                                <div className='register-description'>    
+                                    <Input
+                                        className={'register-description-button'} 
+                                        placeholder={'description (250 words max)'}                                           
                                         />
                                 </div>
-                               <div className='upload'>
+                               <div className='register-upload'>
                                     <UploadButton />    
                                 </div> 
-                                
                             </div>
                             <div className='register-buttonContainer'>
                                 <Button text={
-                                    <p className='buttonText'>Register</p>
+                                    <p className='register-buttonText'>Register</p>
                                 }
                                 />
                             </div>

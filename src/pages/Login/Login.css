@@ -51,12 +51,18 @@
 }
 
 .login-username{
-    height: 120px;
+    height: 40px;
 }
 
-.login-username{
-    height: 30px;
+.login-password{
+    height: 40px;
 }
 
+.login-username-button{
+    height: 25px;
+}
 
+.login-password-button{
+    height: 25px;
+}
 

@@ -19,21 +19,21 @@ function Login() {
                                 <h1 className='login-heading'>Taste<span>Buds</span></h1>
                             </div>    
                             <div className='login-username'>
-                                <Input className='login-username1' placeholder={'username'}
+                                <Input className = 'login-username-button'  placeholder={'username'}
                                 />
                             </div>
                             <div className='login-password'>
-                                <Input placeholder={'password'}
+                                <Input className = 'login-password-button' placeholder={'password'}
                                 />   
                             </div>
 
                             <div className='login-buttonContainer'>
                                 <Button text={
-                                    <p className='buttonText'>Login</p>
+                                    <p className='login-buttonText'>Login</p>
                                 }
                                 />
                                 <Button text={
-                                    <p className='buttonText'>Register</p>
+                                    <p className='login-buttonText'>Register</p>
                                 }
                                 onClickHandler={() => navigate("/register")}/>
                             </div>
