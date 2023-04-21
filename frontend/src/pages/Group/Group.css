@@ -29,7 +29,7 @@ html, body {
 }
 
 .group-left-card-content {
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 .group-filters {
@@ -61,7 +61,7 @@ html, body {
 
 .group-content-cards {
     height: 100%;
-    justify-content: start;
+    justify-content: flex-start;
     overflow-x: auto;
     overflow-y: auto;
 }
@@ -85,7 +85,7 @@ html, body {
     display: flex;
     flex-direction: row;
     align-items: left;
-    justify-content: start;
+    justify-content: flex-start;
     margin-top: 10px;
     margin-left: 15px;
 }
@@ -199,7 +199,7 @@ html, body {
     overflow-y: scroll;
     border: double 3px transparent;
     border-radius: 10px;
-    
+
     background-image: linear-gradient(white, white), linear-gradient(to bottom right, #ffcf42, #EC6F34, #E24C52, #C6427B);
     background-origin: border-box;
     background-clip: padding-box, border-box;

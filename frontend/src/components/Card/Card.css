@@ -1,6 +1,6 @@
 .floating-card {
-    width: stretch;
-    height: stretch;
+    width: 100%;
+    height: 100%;
 
     background-color: white;
 
@@ -9,8 +9,8 @@
 }
 
 .outline-card {
-    width:stretch;
-    height:stretch;
+    width: 100%;
+    height: 100%;
 
     border: double 3px transparent;
     border-radius: 10px;

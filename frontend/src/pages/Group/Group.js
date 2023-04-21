@@ -1,4 +1,4 @@
-import React, { useState, Image } from 'react';
+import React, { useState } from 'react';
 import './Group.css'
 import { useNavigate } from 'react-router-dom';
 import Header from '../../components/Header/Header';
@@ -15,7 +15,7 @@ function Group() {
     const [priceClicked, setPriceClicked] = useState(Array.from( {length: 3}, () => false ));
     const [dietClicked, setDietClicked] = useState(Array.from( {length: 6}, () => false));
     const [mealClicked, setMealclicked] = useState(Array.from( {length: 6}, () => false));
-    
+
     const members = [
         { name: 'Plexie' },
         { name: 'Aneri <3' },
