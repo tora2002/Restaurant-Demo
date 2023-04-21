@@ -1,0 +1,107 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.decision-page-container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.decision-floating-card-container {
+    width: 60%;
+    height: fit-content;
+}
+
+.decision-floating-card-content {
+    width: 100%;
+    height: 100%;
+
+    padding: 10px;
+}
+
+.decision-floating-card-heading {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    text-align: center;
+    color: var(--orange);
+    font-size: 4em;
+    font-weight: 500;
+}
+
+.decision-floating-card-subheading {
+    margin-top: 0;
+
+    text-align: center;
+    color:#808080;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.decision-outline-card-container {
+    width: 100%;
+    height: fit-content;
+}
+
+.decision-outline-card-content {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.decision-outline-card-content-LHS {
+    width: 40%;
+    height: 100%;
+    
+    padding: 10px;
+}
+
+.decision-outline-card-menu-image {
+    width: 100%;
+    height: auto;
+}
+
+.decision-outline-card-content-RHS {
+    width: 60%;
+    height: 100%;
+    
+    padding: 10px;
+}
+
+.decision-outline-card-content-RHS-heading {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    color:var(--vista-blue);
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.decision-outline-card-content-RHS-heading span{
+    margin-top: 0;
+    margin-bottom: 0;
+
+    color:var(--light-gray);
+    font-size: 0.5em;
+    font-weight: bold;
+}
+
+.decision-outline-card-content-RHS-paragraph {
+    width: 100%;
+
+    margin-top: 0;
+}
+
+.decision-outline-card-kirby {
+    width: 100%;
+    height: auto;
+}
