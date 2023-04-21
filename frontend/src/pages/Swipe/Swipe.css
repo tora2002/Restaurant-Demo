@@ -26,12 +26,6 @@ html, body {
     height: 90%;
 }
 
-.floating-card {
-    display: flex;
-    align-items: flex-start;
-    justify-content: top;
-}
-
 .swipeCardContent {
     display: flex;
     flex-direction: column;
