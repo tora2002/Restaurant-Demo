@@ -2,7 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
 }
-.outline-card{
+.swipe-beige-card{
     display: flex;
     width: 60%;
     height: 75%;
@@ -75,10 +75,7 @@ html, body {
     font-size: 1.25rem;
     font-weight: 500;
 }
-.parentButton{
-    height: 30px;
-    
-}
+
 .cardyContainer{
     width: 200px;
     height: 150px;
