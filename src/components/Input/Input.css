@@ -8,10 +8,7 @@
   background-clip: padding-box, border-box;
 }
 
-  
-.custom-input:focus {
-  border-color: blue;
-}
+
 
 .custom-input::placeholder{
   color: gray;

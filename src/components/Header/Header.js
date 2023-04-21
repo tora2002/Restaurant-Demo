@@ -9,7 +9,7 @@ function Header() {
                 {/* add logo here */}
             </div>
             <div className='pageContainer'>
-                <Link className='headerText' to='/home'>Home</Link>
+                <Link className='headerText' to='/'>Home</Link>
                 <Link className='headerText' to='/group'>Create Group</Link>
                 <Link className='headerText' to='/upload'>Upload Food</Link>
                 <Link className='headerText' to='/login'>Login</Link>
