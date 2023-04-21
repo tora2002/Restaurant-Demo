@@ -12,3 +12,6 @@
 .txtGradient{
     color: var(--indian-red);
 }
+.uploadButtonInput{
+    display: none;
+}

@@ -18,8 +18,8 @@ function UploadButton() {
       <button className="uploadBtn"  >
        {(image.preview === "") && 
         <label>
-            <p className="txtGradient"> Upload Photo </p> 
-            <input id="file-upload" type="file" style={{ display: "none" }} onChange={handleChange}  />  
+            <p className="txtGradient"> Upload Photo </p>
+            <input className='uploadButtonInput' id="file-upload" type="file" onChange={handleChange}  /> 
             <p className="txtGradient"> 
                 <Icon fontSize={100} icon="material-symbols:upload-rounded" />
             </p>
@@ -32,6 +32,7 @@ function UploadButton() {
           </>
         )}
          <input
+            className='uploadButtonInput'
             type="file"
             id="upload-button"
             style={{ display: "none" }}
