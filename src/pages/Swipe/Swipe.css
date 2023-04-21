@@ -13,7 +13,7 @@ html, body {
     box-shadow: 1px 2px 9px lightgray;
 }
 
-.swipe-heading{
+.swipe-page-layout{
     height: 100vh;
     display: flex;
     align-items: center;
@@ -82,5 +82,88 @@ html, body {
 .cardyContainer{
     width: 200px;
     height: 150px;
+}
+
+.swiper{
+   
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+    
+    border-radius: 20px;
+    
+
+}
+
+.swipeCard{
+    border: 10px red;
+    display: flex;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 2px 9px lightgray;
+    border-radius: 20px;
+    border-width: 2px;
+    border-style: solid;
+    flex-direction: column;
+    gap: 3%;
+    padding: 3%;
+
+
+}
+.topHalf{
+    display: flex;
+    height: 50%;
+    width: 100%;
+    gap: 3%;
+    /* margin: 3%;
+    padding-left: 5%; */
+}
+.bottomHalf{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+    /* padding-left: 5%; */
+}
+
+.imageBox{
+    display: flex;
+    width: 65%;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5%;
+}
+.tagBox{
+    display: flex;
+    width: 35%;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5%;
+}
+.menuName{
+    color: var(--vista-blue);
+    margin-right: 4%;
+}
+.littleDiv{
+    display: flex;
+    height: 26%;
+
+}
+.location{
+    color: var(--light-gray);
+    padding-top: 3%;
+}
+.gradientLine{
+    
+        background:linear-gradient(to bottom right, #ffcf42, #EC6F34, #E24C52, #C6427B);
+        color: slateblue;
+        height: "5px";
+        border: "none";
+        width: 100%;
 }
 
