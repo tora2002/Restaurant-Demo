@@ -5,4 +5,4 @@ class Group(db.Document):
     ownder = db.ReferenceField('User', required=True)
     members = db.ListField(db.ReferenceField('User'))
     selected_tags = db.ListField(db.StringField())
-    liked_foods = db.MapField(db.ReferenceField('Food'), db.IntField())
+    liked_foods = db.ListField(db.ReferenceField('Food'))
