@@ -6,8 +6,6 @@ import Register from './pages/Register/Register';
 import Group from './pages/Group/Group';
 import Swipe from './pages/Swipe/Swipe';
 import Upload from './pages/Upload/Upload';
-import Waiting from './pages/Waiting/Waiting';
-import Decision from './pages/Decision/Decision';
 
 function App() {
   return (
@@ -20,8 +18,6 @@ function App() {
           <Route exact path={'/group'} element={<Group />} />
           <Route exact path={'/swipe'} element={<Swipe />} />
           <Route exact path={'/upload'} element={<Upload />} />
-          <Route exact path={'/waiting'} element={<Waiting />} />
-          <Route exact path={'/decision'} element={<Decision />} />
         </Routes>
       </Router>
     </>
