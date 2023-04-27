@@ -1,5 +1,4 @@
-import React, { useState, useMemo, useRef } from 'react'
-import { useNavigate } from 'react-router-dom';
+import React from 'react'
 import Header from '../../components/Header/Header';
 import Card from '../../components/Card/Card';
 import './Swipe.css'
@@ -10,11 +9,7 @@ import FoodCard from './components/FoodCard/FoodCard.js';
 
   
 export default function Swipe() {
-  const navigate = useNavigate();
 
-  const handleSwipe = (d) => {
-    //fill this your callback
-  };
   const arr = [
     {
       image: '1',

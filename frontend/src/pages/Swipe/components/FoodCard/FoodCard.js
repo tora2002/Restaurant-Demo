@@ -21,7 +21,7 @@ function FoodCard({image, menuName, location, description, tags, color}) {
           <>
           <div className="swipeCard">
             <div className='topHalf'>
-              <img src={testImage} className='imageBox'/> 
+              <img src={testImage} className='imageBox' alt='imageBox'/> 
               <div className='tagBox'>
                 <Tag tagType={'cuisine'} text = {'Anerr'}> </Tag>
                 <Tag tagType={'price'} text = {'Jermmm'}>yo </Tag>
